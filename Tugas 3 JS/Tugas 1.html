@@ -1,0 +1,102 @@
+<!-- MUHAMMAD AULIA MUZZAKI NUGRAHA - 2311102051 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 1 Soal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              Penjumlahan Deret Ganjil
+            </div>
+            <div class="card-body">
+              <form id="formDeret">
+                <div class="mb-3">
+                  <label for="min" class="form-label">Min</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="min"
+                    name="min"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="max" class="form-label">Max</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="max"
+                    name="max"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Hitung</button>
+              </form>
+              <div class="mt-4">
+                <h5>Hasil:</h5>
+                <div
+                  id="hasil"
+                  class="alert alert-info"
+                  style="display: none"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#formDeret").submit(function (event) {
+          event.preventDefault();
+
+          let minVal = Number($("#min").val());
+          let maxVal = Number($("#max").val());
+
+          if (isNaN(minVal) || isNaN(maxVal) || minVal > maxVal) {
+            $("#hasil")
+              .removeClass("alert-info")
+              .addClass("alert-danger")
+              .text("Input tidak valid!")
+              .show();
+            return;
+          }
+
+          let total = 0;
+          let listGanjil = [];
+
+          for (let n = minVal; n <= maxVal; n++) {
+            if (n % 2 === 1 || n % 2 === -1) {
+              total += n;
+              listGanjil.push(n);
+            }
+          }
+
+          $("#hasil")
+            .removeClass("alert-danger")
+            .addClass("alert-info")
+            .html(
+              "Deret ganjil: " +
+                listGanjil.join(", ") +
+                "<br>Jumlah: <b>" +
+                total +
+                "</b>",
+            )
+            .show();
+        });
+      });
+    </script>
+  </body>
+</html>

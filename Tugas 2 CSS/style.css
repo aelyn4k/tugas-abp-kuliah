@@ -1,0 +1,201 @@
+:root {
+  --blue: #1f86e5;
+  --blue-dark: #166fcb;
+  --orange: #f2b533;
+  --green: #20b42a;
+  --red: #e11f2a;
+  --cyan: #2bb7e6;
+  --tile-orange: #f39a1f;
+  --tile-green: #25b83a;
+  --text: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #111;
+}
+
+.wrap {
+  width: 900px;
+  max-width: calc(100% - 40px);
+  margin: 28px auto 60px;
+}
+
+.brand {
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1;
+}
+.brand .online {
+  color: var(--blue);
+}
+.brand .media {
+  color: var(--orange);
+  margin-left: 10px;
+}
+
+.nav {
+  width: 100%;
+  background: linear-gradient(#2a92ef, #1877d8);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  padding: 3px 12px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+}
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.nav li {
+  flex: 1 1 0;
+  min-width: 0;
+  text-align: center;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: clamp(9px, 0.95vw, 12px);
+  letter-spacing: 0.25px;
+  word-spacing: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 3px 0;
+  display: block;
+  width: 100%;
+  opacity: 0.98;
+}
+
+.tiles-wrap {
+  margin-top: 22px;
+}
+.service-grid {
+  width: 390px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.service-card {
+  height: 145px;
+  position: relative;
+  padding: 10px 12px;
+  color: #fff;
+}
+
+.service-icon {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1;
+}
+
+.service-icon i {
+  font-size: 66px;
+  color: #fff;
+}
+
+.service-label {
+  position: absolute;
+  left: 10px;
+  bottom: 8px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.35px;
+  word-spacing: 2px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45), 0 0 1px rgba(0, 0, 0, 0.45);
+}
+
+.analytic-tile {
+  background: #06c408;
+}
+
+.creative-tile {
+  background: #ff7417;
+}
+
+.development-tile {
+  background: #fd0026;
+}
+
+.marketing-tile {
+  background: #15b9e7;
+}
+
+.media-tile {
+  background: #f6ab00;
+}
+
+.optimization-tile {
+  background: #06c408;
+}
+
+.gears-wrap {
+  width: 90px;
+  height: 60px;
+}
+
+.gears-wrap .big-gear {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  font-size: 54px;
+}
+
+.gears-wrap .small-gear {
+  position: absolute;
+  right: 8px;
+  top: -2px;
+  font-size: 34px;
+}
+
+@media (max-width: 560px) {
+  .service-grid {
+    width: 100%;
+  }
+  .service-card {
+    height: 130px;
+  }
+  .service-icon i {
+    font-size: 56px;
+  }
+  .service-label {
+    font-size: 18px;
+    letter-spacing: 0.25px;
+    word-spacing: 1px;
+  }
+  .brand {
+    font-size: 36px;
+  }
+
+  .nav {
+    padding: 4px 8px;
+  }
+  .nav ul {
+    gap: 6px;
+  }
+  .nav a {
+    font-size: 9px;
+    letter-spacing: 0.2px;
+    padding: 3px 1px;
+  }
+}

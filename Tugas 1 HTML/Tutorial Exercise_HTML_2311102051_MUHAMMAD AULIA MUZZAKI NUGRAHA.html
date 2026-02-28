@@ -1,0 +1,96 @@
+<!-- MUHAMMAD AULIA MUZZAKI NUGRAHA - 2311102051 -->
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Mahasiswa</title>
+  </head>
+  <body>
+    <h2>Data Mahasiswa</h2>
+
+    <form action="#" method="post">
+      <table>
+        <tr>
+          <td><label for="nim">NIM :</label></td>
+          <td><input type="text" id="nim" name="nim" /></td>
+        </tr>
+
+        <tr>
+          <td><label for="nama">Nama :</label></td>
+          <td><input type="text" id="nama" name="nama" size="30" /></td>
+        </tr>
+
+        <tr>
+          <td><label for="tgl_lahir">Tgl Lahir (dd-mm-yyyy) :</label></td>
+          <td><input type="date" id="tgl_lahir" name="tgl_lahir" /></td>
+        </tr>
+
+        <tr>
+          <td>Jenis Kelamin :</td>
+          <td>
+            <label>
+              <input type="radio" name="jk" value="L" />
+              Laki-Laki
+            </label>
+            <label>
+              <input type="radio" name="jk" value="P" />
+              Perempuan
+            </label>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="alamat">Alamat di Bandung :</label></td>
+          <td>
+            <textarea id="alamat" name="alamat" rows="4" cols="30"></textarea>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="tinggal">Tinggal di :</label></td>
+          <td>
+            <select id="tinggal" name="tinggal">
+              <option value="" selected>--pilih--</option>
+              <option value="kos">Kos/kontrakan</option>
+              <option value="saudara">Rumah saudara</option>
+              <option value="orang_tua">Rumah orang tua</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="vertical-align: top">
+            Pilih 2 hobi yang paling disukai :
+          </td>
+          <td>
+            <label
+              ><input type="checkbox" name="hobi[]" value="science" />
+              Science</label
+            ><br />
+            <label
+              ><input type="checkbox" name="hobi[]" value="technology" />
+              Technology</label
+            ><br />
+            <label
+              ><input type="checkbox" name="hobi[]" value="art" /> Art</label
+            ><br />
+            <label
+              ><input type="checkbox" name="hobi[]" value="sport" />
+              Sport</label
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
